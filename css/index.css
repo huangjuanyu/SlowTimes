@@ -1,0 +1,148 @@
+
+/*========================header区域=============================*/
+.header{width:100%;height:80rem;background:#f0e2b3;
+	background:url(../images/index.jpg);
+	background-size:100% 100%;
+}
+.center span{display:inline-block;width:15%;height:8%;background:#05a9e4;
+opacity:0.8;margin:5% 0 0 5%;color:#fff;text-align:center;line-height:2.0;
+font-size:3rem;}
+.center h1{font-size:5rem;text-align:center;
+	background:#fff;opacity:0.8;width:65%;margin:0 auto;}
+/*--------------------box------------------*/
+#box{width:40rem;height:25rem;background-color:#05a9e4;opacity:0.8;position:relative;
+	overflow:hidden;margin-left:60%;margin-top:3%;border-radius:5%;}
+#box div{width:100%;height:100%;position:absolute;left:0;top:0;}
+#box>div ul{width:100%;height:100%;}
+#box>div ul li{width:45%;height:90%;margin:2.5% 0;border-radius:3%;
+	box-sizing:border-box;padding:2%;background-color:#fff;opacity:1;}
+#box>div ul li.one{float:left;margin-left:3%;}
+#box>div ul li.two{float:right;margin-right:3%;}
+#box>div ul li img{display:block;width:100%;height:60%;margin-bottom:2%;}
+#box>div ul li p{text-indent:2em;}
+#box .currentDiv{
+	animation-name:myImgAnimate;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+}
+#box .preDiv {
+	animation-name:myPreImg;
+	animation-duration:1s;
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+}
+@keyframes myImgAnimate{
+	from{opacity:0;}
+	to{opacity:1;}
+}
+@keyframes myPreImg{
+	from{opacity:1;}
+	to{opacity:0;}
+}
+/*=================banner=============================*/
+.banner{width:100%;height:26rem;
+	background:#ccff9a;box-sizing:border-box;}
+.banner h2{text-align:center;color:#000;font-size:3.6rem;padding-top:7rem;}
+.banner p{text-align:center;color:#000;font-size:1.8rem;padding-top:2rem;}
+
+/*=================content=============================*/
+.content{width:100%;width:110rem;margin:0 auto;
+	background-image:url(../images/fix.jpg);
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-size:100% 100%;
+	background-attachment:fixed;
+}
+.content ul{width:100%;margin:0 auto;box-sizing:border-box;}
+.content .pics{height:41rem;width:100%;}
+.content .pics li{float:left;width:31%;height:70%;margin-top:7rem;margin-left:0.8rem;
+	position:relative;cursor:pointer;}
+.content .pics li:nth-child(2){width:35%;}
+.content .pics li a{display:inline-block;width:100%;height:100%;text-align:center;}
+.content .pics li a img{width:100%;height:100%;}
+.content .pics li a span{position:absolute;left:50%;opacity:0;font-size:2rem;
+	transform:translateX(-50%);color:#000;}
+.content .pics li a .span1{top:40%;}
+.content .pics li a .span2{top:50%;}
+.content .pics li::before{content:"";width:100%;height:100%;position:absolute;left:0;
+bottom:0;background-color:#fff;opacity:0.3;transform:scale(0);}
+.content .pics li:hover::before{transform:scale(1);transition:all 0.5s linear;}
+.content .pics li:hover a span{opacity:1;transition:opacity 0.5s linear;}
+.content .pics1{height:67rem;width:100%;}
+.content .pics1 li{float:left;height:50%;box-sizing:border-box;padding:1% 0 0 1%;}
+.content .pics1 li:nth-child(1){width:70%;position:relative;}
+.content .pics1 li:nth-child(2){width:30%;text-align:center;}
+.content .pics1 li:nth-child(3){width:30%;text-align:center;}
+.content .pics1 li:nth-child(4){width:70%;position:relative;}
+.content .pics1 li:nth-child(1) a,.content .pics1 li:nth-child(4) a{width:96%;height:100%;display:inline-block;}
+.content .pics1 li:nth-child(1) a img,.content .pics1 li:nth-child(4) a img{width:100%;height:90%;}
+.content .pics1 li:nth-child(1) a::before,.content .pics1 li:nth-child(4) a::before{
+	content:"slow family";width:100%;height:30%;position:absolute;left:0;bottom:10%;
+	background-color:#000;opacity:0;color:#fff;z-index:1;font-size:2.4rem;text-align:center;
+	line-height:3.0;transform:translateY(0%);transition:all 0.5s linear;}
+.content .pics1 li:nth-child(1) a:hover::before,.content .pics1 li:nth-child(4) a:hover::before{
+	transform:translateY(-30%);opacity:0.7;}
+.content .pics1 li h3{font-size:2rem;color:#000;font-weight:bold;}
+.content .pics1 li a{display:inline-block;width:100%;height:100%;position:relative;}
+.content .pics1 li a p{color:#000;font-size:1.8rem;}
+.content .pics1 li a img:before{}
+.content .pics1 li a p:hover{
+	animation-name:rot;
+	animation-timing-function:ease-in-out;
+	animation-duration:0.6s;
+	animation-fill-mode:forwards;
+	color:#000;
+}
+
+/*=====================animation===============*/
+
+@keyframes rot{
+	from{transform:rotateY(0);opacity:1;}
+	50%{transform:rotateY(100deg);opacity:0;}
+	to{transform:rotateY(0deg);opacity:1;}
+}
+
+@media screen and (max-width:1100px){
+	.header{height:60rem;}
+	.center span{font-size:2rem;}
+	.center h1{font-size:3rem;}
+	#box{width:30rem;height:20rem;}
+	#box>div ul li p{font-size:1.1rem;}
+	.content{width:100%;}
+}
+@media screen and (max-width:815px){
+	.header{height:50rem;}
+	.center span{font-size:1.4rem;}
+	.center h1{font-size:1.8rem;}
+	#box{width:20rem;height:15rem;}
+	#box>div ul li p{font-size:0.8rem;}
+	.banner h2{font-size:2.8rem;}
+	.content{width:100%;}
+	.content .pics{height:30rem;}
+	.content .pics li{width:50%;height:60%;margin-left:25%;}
+	.content .pics li:nth-child(2){width:50%;}
+	.content .pics1{height:135rem;}
+	.content .pics1 li:nth-child(1){width:100%;height:17%;}
+	.content .pics1 li:nth-child(2){width:100%;height:17%;}
+	.content .pics1 li:nth-child(3){width:100%;height:17%;}
+	.content .pics1 li:nth-child(4){width:100%;height:17%;}
+}
+@media screen and (max-width:510px){
+	.header{height:30rem;}
+	.center span{font-size:1.2rem;}
+	.center h1{font-size:1.4rem;}
+	#box{width:12rem;height:10rem;}
+	#box>div ul li p{font-size:0.5rem;}
+	.banner h2{font-size:1.8rem;}
+	.banner p{font-size:1.2rem;}
+	.content{width:100%;}
+	.content .pics{height:30rem;}
+	.content .pics li{width:80%;height:60%;margin-left:10%;}
+	.content .pics li:nth-child(2){width:80%;}
+	.content .pics1{height:135rem;}
+	.content .pics1 li:nth-child(1){width:100%;height:15%;}
+	.content .pics1 li:nth-child(2){width:100%;height:15%;}
+	.content .pics1 li:nth-child(3){width:100%;height:15%;}
+	.content .pics1 li:nth-child(4){width:100%;height:15%;}
+}

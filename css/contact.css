@@ -1,0 +1,57 @@
+.content{height:120rem;
+	background-image:url(../images/fix.jpg);
+	background-repeat:no-repeat;
+	background-position:top left;
+	background-size:100% 100%;
+	background-attachment:fixed;
+}
+.conct{width:90%;margin:0 auto;height:80%;/*background-color:rgba(243,190,107,.35);
+	box-shadow:0 0 5rem rgba(0,0,0,.35);*/}
+/*=====================left=======================*/
+.left{width:45%;height:55%;float:left;box-sizing:border-box;margin:5% 0 0 3%;}
+.left h2{text-align:center;font-size:2.4rem;color:orange;margin-bottom:5%;}
+#map{width:100%;height:80%;border-radius:5%;}
+/*====================right============================*/
+.right{width:45%;height:55%;float:right;margin:5% 3% 0 0;box-sizing:border-box;}
+.right h2{text-align:center;font-size:2.4rem;color:#f21683;margin-bottom:5%;}
+.right form{width:100%;height:80%;/*background:#fff;*/box-sizing:border-box;
+	border-radius:5%;}
+.right form ul{width:100%;height:100%;margin:0 auto;padding-left:10%;
+	box-sizing:border-box;padding-top:3%;}
+.right form ul li{height:12%;line-height:5rem;width:100%;}
+.right form ul li label{display:inline-block;width:20%;text-align:right;
+	padding-right:5%;}
+.right form ul li mark{color:red;font-weight:bold;background:none;padding-left:1%;}
+.right form ul li input.ipt{width:50%;height:50%;}
+.right form ul li input.btn{width:50%;height:100%;background:#f21683;color:#fff;
+	border-radius:5%;font-size:3rem;font-family:"华文行楷";
+	margin:5% 0 0 20%;}
+.right form ul li input.btn:hover{opacity:0.8;}
+.right form ul li input.pointer{cursor:pointer;}
+/*================bottom===========================*/
+.bottom{width:100%;height:40%;}
+.bottom h2{font-size:3rem;margin-left:5%;}
+.contact_left{width:30%;height:80%;float:left;margin-top:5%;}
+.contact_left p{margin:5% 0 0 20%;font-size:1.8rem;}
+.contact_left p a{color:#000;}
+.contact_left p>span{font:2rem 'icomoon';color:orange;margin-right:2%;}
+.contact_right{width:60%;height:80%;float:right;}
+.contact_right input{width:50%;height:15%;display:block;border:0.2rem solid #ccc;
+	margin-bottom:1%;}
+.contact_right textarea{width:80%;height:30%;border:0.2rem solid #ccc;margin-bottom:1%;}
+.contact_right .btn{width:20%;background-color:#000;color:#fff;cursor:pointer;}
+.contact_right .btn:hover{background-color:rgba(0,0,0,0.8);}
+@media screen and (max-width:750px){
+	.content{height:160rem;}
+	.conct{box-shadow:none;width:100%;height:90%;}
+	.left{width:90%;height:25%;margin:3% 0 0 5%;}
+	.right{width:90%;height:40%;float:left;margin:3% 0 0 5%;}
+}
+@media screen and (max-width:550px){
+	.content{height:180rem;}
+	.bottom{width:100%;height:30%;}
+	.bottom h2{font-size:2rem;margin-left:5%;}
+	.contact_left{width:100%;height:40%;margin-top:3%;margin:0 0 0 3%;}
+	.contact_right{width:100%;height:50%;float:left;margin:0 0 0 10%;}
+}
+

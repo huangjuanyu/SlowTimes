@@ -1,0 +1,67 @@
+.content{position:relative;height:130rem;}
+#slider{width:73.8rem;height:23rem;margin:0 auto;overflow:hidden;position:relative;}
+.span1{position:absolute;font-size:5rem;top:20%;transform:translateY(-60%);width:5%;
+	height:8rem;display:inline-block;background-color:#ccc;border-radius:50%;
+	color:#999;cursor:pointer;z-index:1;box-sizing:border-box;}
+#left{left:5%;}
+#right{right:5%;padding-left:1.5rem;}
+#ul{width:295.2rem;height:100%;overflow:hidden;transform:translateX(0%);
+	transition:transform 1s linear;position:absolute;top:0;left:0;}
+#ul li{float:left;height:100%;}
+#ul li a{display:inline-block;width:100%;height:100%;position:relative;}
+#ul li a img{width:73.8rem;height:100%;}
+#ul li a::before{content:"查看更多";width:100%;height:100%;position:absolute;
+left:0;bottom:0;background-color:#fff;opacity:0;color:#000;z-index:1;font-size:1.8rem;
+text-align:center;line-height:12.0;transform:scale(0);}
+#ul li a:hover::before{transform:scale(1);opacity:0.5;transition:all 0.3s linear;}
+/*=================words====================*/
+.words{width:90%;font-size:2rem;margin:6% auto;}
+.words p{text-indent:2em;}
+/*===============stage=====================*/
+#stage{
+	-webkit-perspective:60rem;
+	-moz-perspective:60rem;
+	perspective:60rem;
+	width:80%;height:40%;
+	position:absolute;top:55%;left:10%;margin:0 auto;
+	box-shadow:inset 0 0 5rem rgba(8,223,220,.35);
+	background:#f0f0f0;
+	perspective-origin:50% 50%;
+}
+#container{
+	width:16rem;
+	height:12rem;
+	position:absolute;
+	top:30%;left:40%;
+	border:0.1rem solid #f0f0f0;
+	transform-style:preserve-3d;
+	transition:transform 1s linear;
+	cursor:pointer;
+}
+#container img{width:100%;height:100%;position:absolute;bottom:0;}
+#stage .span2{color:#05a9e4;font-size:3rem;position:absolute;bottom:15%;left:50%;
+	transform:translateX(-50%);}
+@media screen and (max-width:1100px){
+	#slider{width:60rem;height:20rem;}
+	#right{padding-left:0.5rem;}
+	#stage{height:30%;}
+	#container{left:38%;width:16rem;height:12rem;}
+	#stage .span2{font-size:2.4rem;}
+}
+@media screen and (max-width:800px){
+	#stage{width:100%;left:0%;}
+	#container img{width:80%;height:80%;}
+}
+@media screen and (max-width:700px){
+	#container img{width:70%;height:70%;}
+}
+@media screen and (max-width:600px){
+	#slider{width:100%;height:20rem;}
+	.span1{background-color:rgba(0,0,0,0.0);font-size:3rem;color:#000;}
+	#left{left:0%;}
+	#right{right:0%;}
+	.words{height:80%;}
+	.words p{font-size:1.4rem;}
+	#container img{width:100%;height:100%;}
+	#stage .span2{font-size:1.4rem;line-height:1.7;}
+}
